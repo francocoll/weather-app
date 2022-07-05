@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import styles from './Cards.module.css'
 
-export default function Cards({ cities }) {
+export default function Cards({ cities, onClose }) {
 
   // acá va tu código
   // tip, podés usar un map
@@ -14,7 +14,7 @@ export default function Cards({ cities }) {
         min={city.min}
         max={city.max}
         img={city.img}
-        onClose={() => alert(city.name)}
+        onClose={() => onClose(city.id)}
       />
     ))}</div>
 };
