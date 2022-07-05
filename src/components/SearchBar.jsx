@@ -1,12 +1,15 @@
 import React from 'react';
+import styles from './SearchBar.module.css'
+import { IoAdd } from 'react-icons/io5'
 
-export default function SearchBar({onSearch}) {
+export default function SearchBar({ onSearch }) {
   // acá va tu código
   const handleOnSearch = () => onSearch(document.getElementById('searchInput').value)
   return (
-  <div>
-    <input id='searchInput' placeholder='Enter a city'/>
-    <button onClick={handleOnSearch}>Add</button>
-
-  </div>)
+    <div className={styles.searchBar}>
+      <input className={styles.input} id='searchInput' placeholder='Enter a city' />
+      <button className={styles.button} onClick={handleOnSearch}>
+        <IoAdd />
+      </button>
+    </div>)
 };
