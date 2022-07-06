@@ -33,14 +33,18 @@ function App() {
           <SearchBar onSearch={onSearch} />
         </div>
         <div className={styles.citiesContainer}>
-          {data.length > 0 && <Card
-            primary
-            max={data[data.length - 1].max}
-            min={data[data.length - 1].min}
-            name={data[data.length - 1].name}
-            img={data[data.length - 1].img}
-          />}
-          <Cards cities={data} onClose={handleClose} />
+          {data.length > 0 ? (
+            <>
+              <Card
+                primary
+                max={data[data.length - 1].max}
+                min={data[data.length - 1].min}
+                name={data[data.length - 1].name}
+                img={data[data.length - 1].img}
+              />
+              <Cards cities={data} onClose={handleClose} />
+            </>
+          ) : <span style={{ textAlign: 'center', width: '70vw', marginTop: '1rem', fontSize: '2rem' }}>Add a new city </span>}
         </div>
       </div>
     </div>
