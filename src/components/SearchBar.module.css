@@ -1,6 +1,6 @@
 .searchBar{
     display: flex;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-left: 1.5rem;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .input::placeholder{
-    color: #ffffff86;
+    color: #00000086;
 }
 
 .button{
@@ -32,7 +32,7 @@
     background-color: transparent;
     transition: background-color 0.25s;
     cursor: pointer;
-    color: #fff;
+    color: #0c0000;
 }
 
 .button:hover{
