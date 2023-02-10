@@ -3,9 +3,6 @@ import Card from './Card';
 import styles from './Cards.module.css'
 
 export default function Cards({ cities, onClose }) {
-
-  // acá va tu código
-  // tip, podés usar un map
   return <div className={styles.cards}>
     {cities.map((city) => (
       <Card

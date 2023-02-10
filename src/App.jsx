@@ -8,6 +8,7 @@ import fetchCity from './services/fetchCity.js';
 
 
 
+
 function App() {
   const [data, setData] = useState([])
 
@@ -37,7 +38,7 @@ function App() {
           <div className={styles.citiesContainer}>
             <Cards cities={data} onClose={handleClose} />
           </div>
-        ) : <span className={styles.noCities}> Add a new city </span>}
+        ) : <span className={styles.noCities}>No cities to show :( </span>}
       </div>
     </div>
   );
