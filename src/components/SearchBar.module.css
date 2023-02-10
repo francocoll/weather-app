@@ -1,7 +1,7 @@
 .searchBar{
     display: flex;
-    margin-top: 1rem;
-    margin-left: 1.5rem;
+    padding: .5rem;
+    background-color: #fff;
 }
 
 .input {

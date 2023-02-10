@@ -12,7 +12,7 @@ function App() {
   const [data, setData] = useState([])
 
   function onSearch(ciudad) {
-    if (data.length > 2) {
+    if (data.length > 5) {
       alert("Cant add more cities");
     } else {
       fetchCity(ciudad, setData)
@@ -33,14 +33,11 @@ function App() {
         <div>
           <SearchBar onSearch={onSearch} />
         </div>
-        <div className={styles.citiesContainer}>
-          {data.length > 0 ? (
-            <>
-              
-              <Cards cities={data} onClose={handleClose} />
-            </>
-          ) : <span className={styles.noCities}> Add a new city </span>}
-        </div>
+        {data.length > 0 ? (
+          <div className={styles.citiesContainer}>
+            <Cards cities={data} onClose={handleClose} />
+          </div>
+        ) : <span className={styles.noCities}> Add a new city </span>}
       </div>
     </div>
   );
