@@ -23,7 +23,6 @@ export default function Card(props) {
           </div>
           <div className={styles.minMax}>
             {min}°C / {max}°C
-
           </div>
         </div>
       </div>
