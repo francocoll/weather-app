@@ -16,6 +16,7 @@ function App() {
       alert("Cant add more cities");
     } else {
       fetchCity(ciudad, setData)
+      console.log(data[0].temp)
     }
   }
 
@@ -35,16 +36,10 @@ function App() {
         <div className={styles.citiesContainer}>
           {data.length > 0 ? (
             <>
-              <Card
-                primary
-                max={data[data.length - 1].max}
-                min={data[data.length - 1].min}
-                name={data[data.length - 1].name}
-                img={data[data.length - 1].img}
-              />
+              
               <Cards cities={data} onClose={handleClose} />
             </>
-          ) : <span style={{ textAlign: 'center', width: '70vw', marginTop: '1rem', fontSize: '2rem' }}>Add a new city </span>}
+          ) : <span className={styles.noCities}> Add a new city </span>}
         </div>
       </div>
     </div>

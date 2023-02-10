@@ -5,16 +5,17 @@ import { IoCloseCircleOutline } from 'react-icons/io5'
 
 export default function Card(props) {
   // acá va tu código
-  const { max, min, name, img, onClose, primary } = props
+  const { max, min, name, img, onClose, temp } = props
   return (
-    <div className={`${styles.card} ${primary ? styles.primary : ''}`}>
-
+    <div className={styles.card}>
+      <button className={styles.button} onClick={onClose}><IoCloseCircleOutline /></button>
+      <img src={` http://openweathermap.org/img/wn/${img}@2x.png`} alt='icono' />
       <span className={styles.name}>
         {name}
-        {!primary &&
-          <button className={styles.button} onClick={onClose}><IoCloseCircleOutline /></button>}
       </span>
-      <img src={` http://openweathermap.org/img/wn/${img}@2x.png`} alt='icono' />
+      <div>
+        {Math.round(temp)}
+      </div>
       <div className={styles.temps}>
         <Temp label='Min' temp={min} />
         <Temp label='Max' temp={max} />

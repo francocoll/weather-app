@@ -1,11 +1,12 @@
-.temp{
+.temp {
     display: flex;
     flex-direction: column;
     width: 3rem;
     justify-content: center;
     text-align: center;
+    color: black
 }
 
-.temp + .temp {
+.temp+.temp {
     margin-left: 1rem;
 }
